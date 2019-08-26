@@ -13,3 +13,10 @@ from within root directory:
 ```bash
 sudo docker-compose up --build
 ```
+
+---
+
+### *References*
+
+* [Julian Nash - Pythonise - Building a Flask app with Docker](https://pythonise.com/feed/flask/building-a-flask-app-with-docker-compose)
+* [Patrick Kennedy - How to use Docker and Docker Compose to create a Flask application](http://www.patricksoftwareblog.com/how-to-use-docker-and-docker-compose-to-create-a-flask-application/)
