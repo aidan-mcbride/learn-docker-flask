@@ -1,0 +1,20 @@
+# specify which version of the docker-compose format to use
+version: "3.7"
+
+services:
+
+  flask:
+    build: ./flask  # location of Dockerfile relative to this.
+    container_name: flask # names this container; assigns hostname
+    restart: always
+    environment:  # define environment variables in container
+      - ENV_NAME=DockerFlask
+    expose: # expose internal ports to other containers.
+      - 8080
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    restart: always
+    ports:  # map ports: HOST:CONTAINER
+      - "80:80" # maps external port 80 to internal port 80
