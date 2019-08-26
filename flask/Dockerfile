@@ -6,12 +6,15 @@ FROM python:3.7-stretch
 # conceptually equivalent to cd'ing into /app
 WORKDIR /app
 
+# install pipenv
+RUN pip install pipenv
+
 # copy the current directory contents into
 # the container at /app
 ADD . /app
 
 # Install flask app dependencies
-RUN pipenv install
+RUN pipenv install --system --deploy --ignore-pipfile
 
 # run the command to start uWSGI server
 # see:
